@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Корзина интернет-магазина комнатных растений Зелёный дом.">
+    <title>Корзина — Зелёный дом</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/data.js" defer></script><script src="js/cart.js" defer></script><script src="js/main.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">Зелёный дом</a>
+        <button class="site-nav__toggle" type="button" aria-controls="main-navigation" aria-expanded="false">Меню <span aria-hidden="true">☰</span></button>
+        <nav class="site-nav" id="main-navigation" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html">Главная</a></li><li><a class="site-nav__link" href="catalog.html">Каталог</a></li><li><a class="site-nav__link" href="product.html">Товар</a></li><li><a class="site-nav__link" href="order.html">Заявка</a></li><li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            <li><a class="site-nav__link site-nav__link--active cart-link" href="cart.html" aria-current="page">Корзина <span class="cart-count js-cart-count" hidden>0</span></a></li>
+            <li><button class="theme-toggle js-theme-toggle" type="button" aria-pressed="false">Тёмная тема</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span>Корзина</span></nav>
+      <section class="page-intro"><p class="section__label">Корзина</p><h1>Ваши растения</h1><p>Количество и итоговая сумма пересчитываются автоматически. Корзина сохраняется после перезагрузки.</p></section>
+      <div class="cart-layout">
+        <section aria-labelledby="cart-list-title">
+          <h2 id="cart-list-title">Товары</h2><div class="cart-list js-cart-list"></div>
+          <div class="empty-state js-cart-empty" hidden><h2>Корзина пока пуста</h2><p>Добавьте растения из каталога, и они появятся здесь.</p><a class="button" href="catalog.html">Перейти в каталог</a></div>
+        </section>
+        <aside class="cart-summary js-cart-summary" aria-labelledby="cart-summary-title" hidden>
+          <h2 id="cart-summary-title">Итого</h2><p><span>Товары</span><strong class="js-cart-subtotal">0 руб.</strong></p><p><span>Скидка</span><strong class="js-cart-discount">0 руб.</strong></p><p class="cart-summary__total"><span>К оплате</span><strong class="js-cart-total">0 руб.</strong></p>
+          <form class="promo-form js-promo-form"><label for="promo-code">Промокод</label><div class="promo-form__row"><input class="order-form__input js-promo-input" id="promo-code" type="text" placeholder="GREEN10"><button class="button button--secondary" type="submit">Применить</button></div><p class="promo-form__message js-promo-message" role="status">Учебный код: GREEN10</p></form>
+          <a class="button cart-summary__order" href="order.html">Перейти к заявке</a>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer"><div class="site-footer__inner"><div><p class="site-footer__title">Зелёный дом</p><p>Учебный интернет-магазин комнатных растений.</p></div><div><p><strong>Телефон:</strong> +7 (495) 123-45-67</p><p><strong>E-mail:</strong> hello@green-home.example</p></div><nav class="site-footer__nav" aria-label="Дополнительная навигация"><a href="catalog.html">Каталог</a><a href="order.html">Заявка</a><a href="contacts.html">Контакты</a></nav></div><p class="site-footer__copyright">© 2026 Учебный проект. Полянский Алексей, ЭФБО-01-25.</p></footer>
+    <a class="back-to-top" href="#top">Наверх</a>
+  </body>
+</html>

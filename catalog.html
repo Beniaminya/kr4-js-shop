@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог комнатных растений интернет-магазина Зелёный дом.">
+    <title>Каталог растений — Зелёный дом</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/data.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main-content">Перейти к содержимому</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-header__logo" href="index.html">Зелёный дом</a>
+        <button class="site-nav__toggle" type="button" aria-controls="main-navigation" aria-expanded="false">Меню <span aria-hidden="true">☰</span></button>
+        <nav class="site-nav" id="main-navigation" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="index.html">Главная</a></li>
+            <li><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+            <li><a class="site-nav__link" href="product.html">Товар</a></li>
+            <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+            <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+            <li><a class="site-nav__link cart-link" href="cart.html">Корзина <span class="cart-count js-cart-count" hidden>0</span></a></li>
+            <li><button class="theme-toggle js-theme-toggle" type="button" aria-pressed="false">Тёмная тема</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span>Каталог</span></nav>
+      <section class="page-intro">
+        <p class="section__label">Каталог</p>
+        <h1>Комнатные растения</h1>
+        <p>Каталог создаётся из массива товаров. Поиск, фильтр и сортировка работают без перезагрузки страницы.</p>
+      </section>
+
+      <section class="catalog-tools" aria-labelledby="catalog-tools-title">
+        <h2 id="catalog-tools-title">Поиск и фильтры</h2>
+        <div class="catalog-tools__grid">
+          <div><label for="catalog-search">Поиск по названию</label><input class="order-form__input js-catalog-search" id="catalog-search" type="search" placeholder="Например, фикус"></div>
+          <div>
+            <label for="category-filter">Категория</label>
+            <select class="order-form__input js-category-filter" id="category-filter">
+              <option value="all">Все категории</option><option value="large">Крупные растения</option><option value="decorative">Декоративно-лиственные</option><option value="easy-care">Неприхотливые</option><option value="desktop">Для рабочего стола</option>
+            </select>
+          </div>
+          <div>
+            <label for="sort-select">Сортировка</label>
+            <select class="order-form__input js-sort-select" id="sort-select">
+              <option value="default">По умолчанию</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="title">По названию</option>
+            </select>
+          </div>
+          <button class="button button--secondary js-reset-catalog" type="button">Сбросить</button>
+        </div>
+      </section>
+
+      <section class="catalog catalog--full" aria-labelledby="catalog-title">
+        <div class="catalog__heading"><h2 id="catalog-title">Все растения</h2><p class="catalog__count js-result-count" role="status">Найдено товаров: 0</p></div>
+        <div class="catalog__grid js-catalog-grid"></div>
+        <div class="empty-state js-catalog-empty" hidden>
+          <h3>Ничего не найдено</h3><p>Измените поисковый запрос или сбросьте фильтры.</p><button class="button js-reset-catalog" type="button">Показать все товары</button>
+        </div>
+      </section>
+      <p class="page-message js-page-message" role="status" hidden></p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div><p class="site-footer__title">Зелёный дом</p><p>Учебный интернет-магазин комнатных растений.</p></div>
+        <div><p><strong>Телефон:</strong> +7 (495) 123-45-67</p><p><strong>E-mail:</strong> hello@green-home.example</p></div>
+        <nav class="site-footer__nav" aria-label="Дополнительная навигация"><a href="catalog.html">Каталог</a><a href="cart.html">Корзина</a><a href="contacts.html">Контакты</a></nav>
+      </div>
+      <p class="site-footer__copyright">© 2026 Учебный проект. Полянский Алексей, ЭФБО-01-25.</p>
+    </footer>
+    <a class="back-to-top" href="#top">Наверх</a>
+  </body>
+</html>
